@@ -1,0 +1,41 @@
+/* Container to align button and name */
+.play-container {
+  display: flex;
+  align-items: center;
+  gap: 3px;       /* Space between button and name */
+  cursor: pointer;  /* Makes the whole container feel clickable */
+}
+
+/* The green circular play button */
+.play-button {
+  width: 32px;
+  height: 20px;
+  background-color: green;
+  border-radius: 22%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The white triangle inside the circle */
+.play-button::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid white;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+/* The name next to the button */
+.play-name {
+  font-family: "Impact", Arial, Sans-serif;
+  font-size: 22px;
+  font-weight: normal;
+  letter-spacing: -0.5px;
+  color: black;
+}
+.play-container:hover .play-button {
+  background-color: darkgreen;
+}
