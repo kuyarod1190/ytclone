@@ -137,4 +137,28 @@
 .sidebar ul li span {
   transition: all 0.3s ease;
 }
-
+.sidebar-footer {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 12px; /* 👈 Change this number to make it larger or smaller */
+  color: #777;
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+.site-footer {
+  position: fixed;       /* stays at bottom even when scrolling */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  font-size: 12px;       /* 👈 adjust size here */
+  color: #555;
+  padding: 8px 10px;
+  border-top: 1px solid #ccc;
+  z-index: 1000;
+}
