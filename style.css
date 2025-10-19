@@ -2,7 +2,7 @@
 .play-container {
   position:fixed;
   top: 10px;
-  left: 60px;
+  left: 80px;
   display: flex;
   align-items: center;
   gap: 3px;       /* Space between button and name */
@@ -44,14 +44,14 @@
 }
 .hamburger {
   position: fixed;   /* stays in the same spot even when scrolling */
-  top: 10px;         /* distance from top edge */
-  left: 10px;        /* distance from left edge */
+  top: 12px;         /* distance from top edge */
+  left: 30px;        /* distance from left edge */
   cursor: pointer;
 }
 
 .hamburger .line {
-  width: 25px;
-  height: 2px;
+  width: 22px;
+  height: 1px;
   background-color: black;
   margin: 5px 0;
   border-radius: 2px;
