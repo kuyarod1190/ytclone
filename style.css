@@ -103,7 +103,9 @@
 .sidebar.collapsed {
   transform: translateX(-220px);
 }
-
+.sidebar.collapsed ~ .main-content {
+  margin-left: 0; /* expand main content area */
+}
 /* Main Content */
 .main-content {
   margin-left: 220px;
