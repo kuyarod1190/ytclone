@@ -1,15 +1,44 @@
-/* Container to align button and name */
-.play-container {
-  position:fixed;
-  top: 10px;
-  left: 80px;
-  display: flex;
-  align-items: center;
-  gap: 3px;       /* Space between button and name */
-  cursor: pointer;  /* Makes the whole container feel clickable */
+/* Reset */
+:root {
+  --sidebar-font-size: 15px; /* change this to resize sidebar text */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-/* The green circular play button */
+/* Top bar containing hamburger + play button */
+.top-bar {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1002;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  cursor: pointer;
+}
+.hamburger .line {
+  width: 22px;
+  height: 2px;
+  background-color: black;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+/* Play Button & Name */
+.play-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
 .play-button {
   width: 32px;
   height: 20px;
@@ -19,8 +48,6 @@
   justify-content: center;
   align-items: center;
 }
-
-/* The white triangle inside the circle */
 .play-button::before {
   content: "";
   display: block;
@@ -30,10 +57,8 @@
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
 }
-
-/* The name next to the button */
 .play-name {
-  font-family: "Impact", Arial, Sans-serif;
+  font-family: "Impact", Arial, sans-serif;
   font-size: 22px;
   font-weight: normal;
   letter-spacing: -0.5px;
@@ -42,17 +67,52 @@
 .play-container:hover .play-button {
   background-color: darkgreen;
 }
-.hamburger {
-  position: fixed;   /* stays in the same spot even when scrolling */
-  top: 12px;         /* distance from top edge */
-  left: 30px;        /* distance from left edge */
+
+/* Sidebar Navigation */
+.sidebar {
+  position: fixed;
+  top: 60px; /* below top bar */
+  left: 0;
+  width: 220px;
+  height: calc(100% - 60px);
+  background-color: #f9f9f9;
+  border-right: 1px solid #ddd;
+  padding-top: 10px;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+  z-index: 1001;
+}
+.sidebar ul {
+  list-style: none;
+}
+.sidebar ul li {
+  list-style: none;
+  display: flex;              /* make icon + text sit side by side */
+  align-items: center;        /* vertically center icon and text */
+  gap: 15px;                  /* space between icon and text */
+  padding: 10px 20px;         /* smaller, more balanced padding */
   cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: var(--sidebar-font-size);
+}
+.sidebar ul li:hover {
+  background-color: #e0e0e0;
 }
 
-.hamburger .line {
-  width: 22px;
-  height: 1px;
-  background-color: black;
-  margin: 5px 0;
-  border-radius: 2px;
+/* Collapsed Sidebar */
+.sidebar.collapsed {
+  transform: translateX(-220px);
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 220px;
+  padding: 20px;
+  margin-top: 60px; /* avoid overlap with top bar */
+  transition: margin-left 0.3s ease;
+}
+
+/* Adjust main content when sidebar is collapsed */
+.sidebar.collapsed ~ .main-content {
+  margin-left: 0;
 }

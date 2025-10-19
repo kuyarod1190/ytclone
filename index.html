@@ -4,16 +4,43 @@
   <meta charset="UTF-8">
   <title>YouClone</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <div class="hamburger">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
+  <!-- Top Left: Hamburger + Play Button -->
+  <div class="top-bar">
+    <div class="hamburger" id="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <div class="play-container">
+      <div class="play-button"></div>
+      <span class="play-name">YouClone</span>
+    </div>
   </div>
-  <div class="play-container">
-    <div class="play-button"></div>
-    <span class="play-name">YouClone</span>
+
+  <!-- Sidebar Navigation -->
+  <div class="sidebar" id="sidebar">
+  <ul>
+    <li><i class="fa-solid fa-house"></i> Home</li>
+    <li><i class="fa-solid fa-film"></i> Shorts</li>
+    <li><i class="fa-solid fa-bell"></i> Subscriptions</li>
+    <li><i class="fa-solid fa-clock-rotate-left"></i> History</li>
+    <li><i class="fa-solid fa-list"></i> Playlists</li>
+    <li><i class="fa-solid fa-video"></i> Your videos</li>
+    <li><i class="fa-solid fa-clock"></i> Watch later</li>
+    <li><i class="fa-solid fa-thumbs-up"></i> Liked Videos</li>
+    <li><i class="fa-solid fa-download"></i> Downloads</li>
+  </ul>
+</div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>Welcome to YouClone</h1>
+    <p>Your video content goes here...</p>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
