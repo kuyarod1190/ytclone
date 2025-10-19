@@ -1,5 +1,8 @@
 /* Container to align button and name */
 .play-container {
+  position:fixed;
+  top: 10px;
+  left: 60px;
   display: flex;
   align-items: center;
   gap: 3px;       /* Space between button and name */
@@ -38,4 +41,18 @@
 }
 .play-container:hover .play-button {
   background-color: darkgreen;
+}
+.hamburger {
+  position: fixed;   /* stays in the same spot even when scrolling */
+  top: 10px;         /* distance from top edge */
+  left: 10px;        /* distance from left edge */
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 2px;
+  background-color: black;
+  margin: 5px 0;
+  border-radius: 2px;
 }
